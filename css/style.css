@@ -17,6 +17,7 @@
 body {
   background-color: var(--bg-color);
   color: #ffff;
+  /* min-height: 2000px; */
 }
 
 /* Navbar */
@@ -81,6 +82,65 @@ body {
   display: none;
 }
 
+/* Hero Section */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  background-image: url("../img/acupunture.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.hero::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    0deg,
+    rgba(1, 1, 1, 1),
+    rgba (225, 225, 225, 0) 25%
+  );
+}
+
+.hero .content {
+  padding: 1.4rem 7%;
+  max-width: 60rem;
+}
+
+.hero .content h1 {
+  font-size: 5em;
+  color: #ffff;
+  text-shadow: 1px 1px 3px rgba(1, 1, 1, 1, 0.5);
+  line-height: 1.1;
+}
+
+.hero .content h1 span {
+  color: var(--primary-color);
+}
+
+.hero .content p {
+  font-size: 1.6rem;
+  margin-top: 1rem;
+  font-weight: 100;
+  line-height: 1.4;
+  text-shadow: 1px 1px 3px rgba(1, 1, 1, 1, 0.5);
+}
+
+.hero .content .cta {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 1rem 3rem;
+  color: var(--bg-color);
+  background-color: var(--primary-color);
+  border-radius: 25px;
+  box-shadow: rgba(45, 35, 71, 0.8);
+  cursor: pointer;
+}
 /* Media Query */
 /* Laptop */
 @media (max-width: 1366px) {
