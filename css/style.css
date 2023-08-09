@@ -3,7 +3,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;400;600;700&display=swap");
 
 :root {
-  --primary-color: #a084e8;
+  --primary-color: #7a4af3;
   --bg-color: #ffff;
 }
 html {
@@ -84,7 +84,40 @@ body {
 #humberger-menu {
   display: none;
 }
+/* navbar search */
+.navbar .search-form {
+  position: absolute;
+  top: 100%;
+  right: 7%;
+  background-color: var(--primary-color);
+  display: flex;
+  align-items: center;
+  height: 3rem;
+  width: 50%;
+  transform: scaleY(0);
+  transform-origin: top;
+  transition: 0.3s;
+}
 
+.navbar .search-form.active {
+  transform: scaleY(1);
+}
+.navbar .search-form input {
+  height: 100%;
+  width: 100%;
+  font-size: 1.3rem;
+  color: var(--primary-color);
+  margin-right: 0.5rem;
+  padding: 1rem;
+}
+
+.navbar .search-form label {
+  cursor: pointer;
+  font-size: 2rem;
+  margin-right: 1.5rem;
+  color: var(--bg-color);
+  align-items: center;
+}
 /* Hero Section */
 .hero {
   min-height: 100vh;
@@ -149,13 +182,15 @@ body {
 /* About Section */
 .about,
 .menu,
-.contact {
+.contact,
+.produk {
   padding: 10rem 7% 1.4rem;
 }
 
 .about h2,
 .menu h2,
-.contact h2 {
+.contact h2,
+.produk h2 {
   text-align: center;
   font-size: 2.6rem;
   margin-bottom: 3rem;
@@ -163,7 +198,8 @@ body {
 
 .about h2 span,
 .menu h2 span,
-.contact h2 span {
+.contact h2 span,
+.produk h2 span {
   color: var(--primary-color);
 }
 
@@ -200,7 +236,8 @@ body {
   margin-bottom: 1rem;
 }
 .menu p,
-.contact p {
+.contact p,
+.produk p {
   text-align: center;
   max-width: 30rem;
   margin: auto;
@@ -354,6 +391,11 @@ footer .credit a {
     transform: scaleX(0.2);
   }
 
+  .navbar .search-form {
+    width: 90%;
+    right: 2rem;
+  }
+
   .about .row {
     flex-wrap: wrap;
   }
@@ -393,6 +435,7 @@ footer .credit a {
 .contact .row form {
   padding-top: 0;
 }
+
 /* Mobile Phone */
 @media (max-width: 450px) {
   html {
