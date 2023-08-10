@@ -1,0 +1,110 @@
+<!-- @format -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      modal {
+        display: flex;
+        position: fixed;
+        z-index: 9999;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background-color: rgba(160, 132, 232, 0.5);
+      }
+
+      .modal-container {
+        position: relative;
+        background-color: #fefefe;
+        color: var(--primary-color);
+        margin: 15% auto;
+        padding: 1.2rem;
+        border: 1px solid #888;
+        width: 80%;
+        border-radius: 2px;
+      }
+
+      .modal-container .close-btn {
+        position: absolute;
+        right: 1rem;
+        font-size: 3rem;
+        color: var(--primary-color);
+        cursor: pointer;
+      }
+
+      .modal-content {
+        display: flex;
+        flex-wrap: nowrap;
+      }
+
+      .modal-content img {
+        height: 20rem;
+        margin-right: 2rem;
+        margin-bottom: 2rem;
+      }
+
+      .modal-content p {
+        font-size: 1.2rem;
+        line-height: 1.8rem;
+        margin-top: 1.2rem;
+      }
+
+      .modal-content a {
+        display: flex;
+        gap: 1rem;
+        width: 12rem;
+        background-color: var(--primary-color);
+        color: #ffff;
+        margin-top: 1rem;
+        padding: 1rem 1.6rem;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="modal" id="item-modal-detail">
+      <div class="modal-container">
+        <a href="#">
+          <i class="fa-solid fa-xmark close-btn"></i>
+        </a>
+        <div class="modal-content">
+          <img src="./img/1.jpg" alt="produk 1" />
+          <div class="produk-content">
+            <h3>Produk 1</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime
+              natus voluptas ea sunt quidem tempora eius ratione doloribus
+              consequuntur cum.
+            </p>
+            <div class="produk-stars">
+              <i class="fa-regular fa-star like"></i>
+              <i class="fa-regular fa-star"></i>
+              <i class="fa-regular fa-star"></i>
+              <i class="fa-regular fa-star"></i>
+              <i class="fa-regular fa-star"></i>
+            </div>
+            <div class="produk-price">IDR 150k <span>IDR 200k</span></div>
+            <a href="#"
+              ><i class="fa-solid fa-cart-shopping"></i
+              ><span>Add to Cart</span></a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      const itemDetailModal = document.querySelectorAll("#item-modal-detail");
+      const itemDetail = document.querySelectorAll(".item-detail");
+
+      itemDetail.onclick = (e) => {
+        itemDetailModal.style.display = "flex";
+        e.preventDefault();
+      };
+    </script>
+  </body>
+</html>
