@@ -74,7 +74,7 @@ closeButton.onclick = (e) => {
 
 // klik di luar modal
 window.onclick = (e) => {
-  if (e.target === itemDetailModall) {
+  if (e.target === itemDetailModal) {
     itemDetailModal.style.display = "none";
     e.preventDefault();
   }
